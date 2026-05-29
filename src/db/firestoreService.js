@@ -94,8 +94,8 @@ export const activateClassForStudent = async (studentUid, studentName, studentId
         paymentType: "physical_activation",
         submittedAt: new Date().toISOString(),
         approvedAt: new Date().toISOString(),
-        tuteRequired: true,
-        deliveryStatus: "Pending"
+        tuteRequired: false,
+        deliveryStatus: "Not Required"
       });
     }
     return { success: true };

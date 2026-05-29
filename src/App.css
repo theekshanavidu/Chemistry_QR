@@ -401,7 +401,7 @@ body {
 
 .student-meta-grid {
   display: grid;
-  grid-cols: 1;
+  grid-template-columns: 1fr;
   gap: 0.75rem;
   font-size: 0.8125rem;
   margin-bottom: 1rem;
@@ -523,4 +523,89 @@ body {
 .copyright-accent {
   color: var(--primary);
   font-weight: bold;
+}
+
+/* --- Mobile Responsive CSS Enhancements --- */
+
+/* HTML5 QR Code Video overrides for responsive scaling */
+#qr-scanner-viewport video {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+/* Stack scanner actions vertically on mobile */
+@media (max-width: 600px) {
+  .scanner-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  
+  .btn-scanner-toggle {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .search-input-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .scanner-actions .btn-submit {
+    width: 100% !important;
+    padding: 0.875rem !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Stack class cards and improve details spacing on small devices */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .login-body {
+    padding: 1.5rem;
+  }
+  
+  .class-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.875rem;
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  .class-info {
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 0.75rem;
+  }
+  
+  .btn-action {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .profile-avatar {
+    margin: 0 auto;
+  }
 }
